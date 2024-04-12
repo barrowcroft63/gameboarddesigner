@@ -1,0 +1,2125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.3">
+  <object class="customtkinter.CTk" id="ctk">
+    <property name="geometry">1600x900</property>
+    <containerlayout manager="grid">
+      <property type="col" id="0" name="minsize">300</property>
+      <property type="col" id="1" name="weight">1</property>
+      <property type="row" id="0" name="weight">1</property>
+    </containerlayout>
+    <child>
+      <object class="customtkinter.CTkTabview" id="palette" named="True">
+        <property name="command" type="command" cbtype="simple">palette_selected</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">0</property>
+          <property name="sticky">nsew</property>
+        </layout>
+        <child>
+          <object class="customtkinter.CTkTabview.Tab" id="details_tab" named="True">
+            <property name="label" translatable="yes">Details</property>
+            <containerlayout manager="grid">
+              <property type="col" id="0" name="weight">1</property>
+              <property type="row" id="0" name="weight">1</property>
+            </containerlayout>
+            <child>
+              <object class="customtkinter.CTkFrame" id="details_frame" named="True">
+                <property name="corner_radius">0</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="details_label" named="True">
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Details</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">0</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="name_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="font">TkDefaultFont</property>
+                    <property name="justify">left</property>
+                    <property name="text" translatable="yes">Name</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">1</property>
+                      <property name="sticky">ew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="name" named="True">
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_name</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">1</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="veriosn_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Version</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="version" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_version</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="date_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="text" translatable="yes">Date</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">3</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="date" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_date</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">3</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="author_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">center</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Author</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">4</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="author" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_author</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">4</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="customtkinter.CTkTabview.Tab" id="boarders_tab" named="True">
+            <property name="label" translatable="yes">Boarders</property>
+            <containerlayout manager="grid">
+              <property type="col" id="0" name="weight">1</property>
+              <property type="row" id="0" name="minsize">0</property>
+              <property type="row" id="0" name="weight">1</property>
+            </containerlayout>
+            <child>
+              <object class="customtkinter.CTkFrame" id="boarders_frame" named="True">
+                <property name="corner_radius">0</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="outer_boarder_label" named="True">
+                    <property name="justify">left</property>
+                    <property name="text" translatable="yes">Outer boarder</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">0</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="width_of_left_outer_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Left</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">1</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="width_of_left_outer_boarder" named="True">
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_width_of_left_outer_boarder</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">1</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_outer_width" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_outer_width</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">1</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="width_of_top_outer_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Top</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="width_of_top_outer_boarder" named="True">
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_width_of_top_outer_boarder</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="width_of_right_outer_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Right</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">3</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="width_of_right_outer_boarder" named="True">
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_width_of_right_outer_boarder</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">3</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="width_of_bottom_outer_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="font">TkDefaultFont</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Bottom</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">4</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="width_of_bottom_outer_boarder" named="True">
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_width_of_bottom_outer_boarder</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">4</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="colour_of_outer_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="font">TkDefaultFont</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Colour</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">5</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="colour_of_outer_boarder" named="True">
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_colour_of_outer_boarder</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">5</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_outer_boarder_colour" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_outer_boarder_colour</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">20 10</property>
+                      <property name="row">5</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="inner_boarder_label" named="True">
+                    <property name="justify">left</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Inner boarder</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">20 0</property>
+                      <property name="row">6</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="width_of_left_inner_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Left</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">7</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="width_of_left_inner_boarder" named="True">
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_width_of_left_inner_boarder</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">7</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_inner_width" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_inner_width</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">7</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="width_of_top_inner_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Top</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">8</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="width_of_top_inner_boarder" named="True">
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_width_of_top_inner_boarder</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">8</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="width_of_right_inner_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Right</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">9</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="width_of_right_inner_boarder" named="True">
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_width_of_right_inner_boarder</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">9</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="width_of_bottom_inner_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="font">TkDefaultFont</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Bottom</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">10</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="width_of_bottom_inner_boarder" named="True">
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_width_of_bottom_inner_boarder</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">10</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="colour_of_inner_boarder_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="font">TkDefaultFont</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Colour</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">11</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="colour_of_inner_boarder" named="True">
+                    <property name="text" translatable="yes">ctkentry5</property>
+                    <property name="textvariable">string:var_colour_of_inner_boarder</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">11</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_inner_boarder_colour" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_inner_boarder_colour</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">20 10</property>
+                      <property name="row">11</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="customtkinter.CTkTabview.Tab" id="cells_tab" named="True">
+            <property name="label" translatable="yes">Cells</property>
+            <containerlayout manager="grid">
+              <property type="col" id="0" name="weight">1</property>
+              <property type="row" id="0" name="weight">1</property>
+            </containerlayout>
+            <child>
+              <object class="customtkinter.CTkFrame" id="cells_frame" named="True">
+                <property name="corner_radius">0</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cells_label" named="True">
+                    <property name="font">TkDefaultFont</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Cells</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">0</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="number_of_cells_horizontally_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="font">TkDefaultFont</property>
+                    <property name="justify">left</property>
+                    <property name="text" translatable="yes">Horizontal</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">1</property>
+                      <property name="sticky">ew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="number_of_cells_horizontally" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_number_of_cells_horizontally</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">1</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="number_of_cells_verticallly_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="text" translatable="yes">Vertical</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="number_of_cells_vertically" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_number_of_cells_vertically</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cells_on_rows_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="text" translatable="yes">Cells on rows</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">20 0</property>
+                      <property name="row">3</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="cells_on_rows_row" named="True">
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_cells_on_rows_row</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">4</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cells_on_rows_row_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="text" translatable="yes">Row</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">4</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="height_of_cell_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Height</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">5</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="height_of_cell" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_height_of_cell</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">5</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_rows_height" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_rows_height</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">5</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="top_padding_of_cell_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Top</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">6</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="top_padding_of_cell" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_top_padding_of_cell</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">6</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_rows_top" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_rows_top</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">6</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="bottom_padding_of_cell_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Bottom</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">7</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="bottom_padding_of_cell" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_bottom_padding_of_cell</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">7</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_rows_bottom" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_rows_bottom</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">7</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="size_of_horizontal_gutter_after_cell_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Gutter</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">8</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="size_of_horizontal_gutter_after_cell" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_size_of_horizontal_gutter_after_cell</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">8</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_rows_horizontal_gutter" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_rows_horizontal_gutter</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">8</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cells_on_columns_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Cells on columns</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">20 0</property>
+                      <property name="row">9</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cells_on_columns_column_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Column</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">10</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="cells_on_columns_column" named="True">
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_cells_on_columns_column</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">10</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="width_of_cell_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Width</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">11</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="width_of_cell" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_width_of_cell</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">11</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_columns_width" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_columns_width</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">11</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="left_padding_of_cell_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Left</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">12</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="left_padding_of_cell" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_left_padding_of_cell</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">12</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_columns_left" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_columns_left</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">12</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="right_padding_of_cell_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Right</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">13</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="right_padding_of_cell" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_right_padding_of_cell</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">13</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_columns_right" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_columns_right</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">13</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="size_of_vertical_gutter_after_cell_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Gutter</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">14</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="size_of_vertical_gutter_after_cell" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_size_of_vertical_gutter_after_cell</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">14</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_columns_vertical_gutter" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_columns_vertical_gutter</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">14</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cell_gutter_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Gutter</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">20 0</property>
+                      <property name="row">15</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="colour_of_cell_gutter_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Colour</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">16</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="colour_of_cell_gutter" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_colour_of_cell_gutter</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">16</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_gutter_colour" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_gutter_colour</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">20 10</property>
+                      <property name="row">16</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cells_on_rows_columns_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Cells on rows and columns</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">20 0</property>
+                      <property name="row">17</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cells_on_rows_columns_row_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Row</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">18</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="cells_on_rows_columns_row" named="True">
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_cells_on_rows_columns_row</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">18</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cells_on_rows_columns_column_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Column</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">19</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="cells_on_rows_columns_column" named="True">
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_cells_on_rows_columns_column</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">19</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="colour_of_cell_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Cell colour</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">20</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="colour_of_cell" named="True">
+                    <property name="insertwidth">1</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_colour_of_cell</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">20</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_cell_colour" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_cell_colour</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">3</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">20</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_cell_colour" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_cell_colour</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">20 10</property>
+                      <property name="row">20</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="colour_of_cell_padding_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Padding</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">21</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="colour_of_cell_padding" named="True">
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_colour_of_cell_padding</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">21</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="all_cell_padding_colour" named="True">
+                    <property name="command" type="command" cbtype="simple">on_all_cells_padding_colour</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">All</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">2</property>
+                      <property name="padx">20 10</property>
+                      <property name="row">21</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_cell_padding_colour" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_cell_padding_colour</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">3</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">21</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="customtkinter.CTkTabview.Tab" id="decorators_tab" named="True">
+            <property name="label" translatable="yes">Decorators</property>
+            <containerlayout manager="grid">
+              <property type="col" id="0" name="weight">1</property>
+              <property type="row" id="0" name="weight">1</property>
+            </containerlayout>
+            <child>
+              <object class="customtkinter.CTkFrame" id="decorators_frame" named="True">
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="ctklabel1" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Checkerboard</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">0</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cell_light_colour_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Light</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">1</property>
+                      <property name="sticky">ew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="cell_light_colour" named="True">
+                    <property name="insertwidth">1</property>
+                    <property name="text" translatable="yes">#FFFFFF</property>
+                    <property name="textvariable">string:var_cell_light_colour</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">1</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_cell_light_colour" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_cell_light_colour</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">3</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">1</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cell_dark_colour_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="justify">left</property>
+                    <property name="state">normal</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Dark</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">ew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="cell_dark_colour" named="True">
+                    <property name="text" translatable="yes">#000000</property>
+                    <property name="textvariable">string:var_cell_dark_colour</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="apply_checkerboard" named="True">
+                    <property name="command" type="command" cbtype="simple">on_apply_checkerboard_colours</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">Apply</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="pady">10</property>
+                      <property name="row">3</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_cell_dark_colour" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_cell_dark_colour</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">3</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">2</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cell_decorators_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Cells decorators</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">20 0</property>
+                      <property name="row">17</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cell_decorators_row_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Row</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">18</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="cell_decorators_row" named="True">
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_cell_decorators_row</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">18</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cell_decorators_column_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Column</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">19</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="cell_decorators_column" named="True">
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_cell_decorators_column</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">19</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="cell_decorator_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Decorator</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">20</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="cell_decorator" named="True">
+                    <property name="justify">left</property>
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_cell_decorator</property>
+                    <property name="width">130</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">3</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">20</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_cell_decorator" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_cell_decorator</property>
+                    <property name="hover">True</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">4</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">20</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="remove_cell_decorator" named="True">
+                    <property name="command" type="command" cbtype="simple">on_remove_cell_decorator</property>
+                    <property name="state">disabled</property>
+                    <property name="text" translatable="yes">Remove</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">21</property>
+                      <property name="sticky">ew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="board_decorators_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Board decorators</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">30 0</property>
+                      <property name="row">22</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkOptionMenu" id="board_decorator_choice" named="True">
+                    <property name="command" type="command" cbtype="simple">on_board_decorator_selected</property>
+                    <property name="variable">string:var_board_decorator_choice</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="ipadx">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">23</property>
+                      <property name="sticky">ew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="board_decorator_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Decorator</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">24</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="board_decorator" named="True">
+                    <property name="justify">left</property>
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_board_decorator</property>
+                    <property name="width">130</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">3</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">24</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_board_decorator" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_board_decorator</property>
+                    <property name="hover">True</property>
+                    <property name="state">disabled</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">4</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">24</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="board_decorator_x_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">X position</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">25</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="board_decorator_x_pos" named="True">
+                    <property name="state">disabled</property>
+                    <property name="text" translatable="yes">0</property>
+                    <property name="textvariable">string:var_board_decorator_x_pos</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">25</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="board_decorator_y_pos_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Y position</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">26</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="board_decorator_y_pos" named="True">
+                    <property name="state">disabled</property>
+                    <property name="text" translatable="yes">0</property>
+                    <property name="textvariable">string:var_board_decorator_y_pos</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">26</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="remove_board_decorator" named="True">
+                    <property name="command" type="command" cbtype="simple">on_remove_board_decorator</property>
+                    <property name="state">disabled</property>
+                    <property name="text" translatable="yes">Remove</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">27</property>
+                      <property name="sticky">ew</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="customtkinter.CTkTabview.Tab" id="tokens_tab" named="True">
+            <property name="label" translatable="yes">Tokens</property>
+            <child>
+              <object class="customtkinter.CTkFrame" id="tokens_frame" named="True">
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                  <property name="sticky">nsew</property>
+                </layout>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="tokens_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Tokens</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">0</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkOptionMenu" id="token_choice" named="True">
+                    <property name="command" type="command" cbtype="simple">on_token_choice</property>
+                    <property name="variable">string:var_token_choice</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">20 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="token_name_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Name</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="token_name" named="True">
+                    <property name="justify">left</property>
+                    <property name="state">disabled</property>
+                    <property name="textvariable">string:var_token_name</property>
+                    <property name="width">130</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">3</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="pick_token" named="True">
+                    <property name="command" type="command" cbtype="simple">on_pick_token</property>
+                    <property name="hover">True</property>
+                    <property name="state">disabled</property>
+                    <property name="text" translatable="yes">...</property>
+                    <property name="width">40</property>
+                    <layout manager="grid">
+                      <property name="column">4</property>
+                      <property name="padx">0 10</property>
+                      <property name="row">3</property>
+                      <property name="sticky">sew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="token_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Token</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">3</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="token" named="True">
+                    <property name="justify">left</property>
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="textvariable">string:var_token</property>
+                    <property name="width">130</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">3</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">3</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="remove_token" named="True">
+                    <property name="command" type="command" cbtype="simple">on_remove_token</property>
+                    <property name="state">disabled</property>
+                    <property name="text" translatable="yes">Remove</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">5</property>
+                      <property name="sticky">ew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="placed_tokens_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Placed tokens</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">10</property>
+                      <property name="pady">20 0</property>
+                      <property name="row">17</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="placed_tokens_row_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Row</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">18</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="placed_tokens_row" named="True">
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_placed_tokens_row</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">18</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="placed_tokens_column_label" named="True">
+                    <property name="anchor">e</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Column</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">19</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkEntry" id="placed_tokens_column" named="True">
+                    <property name="state">disabled</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">ctkentry1</property>
+                    <property name="textvariable">string:var_placed_tokens_column</property>
+                    <property name="width">60</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">19</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkLabel" id="placed_token_name_label" named="True">
+                    <property name="anchor">w</property>
+                    <property name="takefocus">false</property>
+                    <property name="text" translatable="yes">Name</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">20</property>
+                      <property name="sticky">nsew</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkOptionMenu" id="placed_token_name_choice" named="True">
+                    <property name="command" type="command" cbtype="simple">on_placed_token_name_choice</property>
+                    <property name="variable">string:var_placed_token_name_choice</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">0 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">20</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="customtkinter.CTkButton" id="remove_placed_token" named="True">
+                    <property name="command" type="command" cbtype="simple">on_remove_placed_token</property>
+                    <property name="state">disabled</property>
+                    <property name="text" translatable="yes">Remove</property>
+                    <property name="width">80</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">2</property>
+                      <property name="padx">30 10</property>
+                      <property name="pady">10 0</property>
+                      <property name="row">21</property>
+                      <property name="sticky">ew</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="customtkinter.CTkFrame" id="main" named="True">
+        <property name="corner_radius">0</property>
+        <property name="fg_color">#a6a6a6</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="row">0</property>
+          <property name="sticky">nsew</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Menu" id="menu" named="True">
+    <property name="tearoff">false</property>
+    <child>
+      <object class="tk.Menuitem.Submenu" id="file_menu" named="True">
+        <property name="label" translatable="yes">File</property>
+        <property name="specialmenu">apple</property>
+        <property name="state">normal</property>
+        <property name="tearoff">false</property>
+        <child>
+          <object class="tk.Menuitem.Command" id="new" named="True">
+            <property name="accelerator">Ctrl-N</property>
+            <property name="command" type="command" cbtype="simple">on_new</property>
+            <property name="label" translatable="yes">New</property>
+            <property name="underline">0</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="open" named="True">
+            <property name="accelerator">Ctrl-O</property>
+            <property name="command" type="command" cbtype="simple">on_open</property>
+            <property name="label" translatable="yes">Open...</property>
+            <property name="underline">0</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Submenu" id="recent_files_menu" named="True">
+            <property name="columnbreak">false</property>
+            <property name="label" translatable="yes">Open recent...</property>
+            <property name="specialmenu">system</property>
+            <property name="tearoff">false</property>
+            <child>
+              <object class="tk.Menuitem.Separator" id="separator1" />
+            </child>
+            <child>
+              <object class="tk.Menuitem.Command" id="clear_recent" named="True">
+                <property name="command" type="command" cbtype="simple">on_clear_recent_files</property>
+                <property name="compound">left</property>
+                <property name="label" translatable="yes">Clear recent...</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Separator" id="separator3" />
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="save" named="True">
+            <property name="accelerator">Ctrl-S</property>
+            <property name="command" type="command" cbtype="simple">on_save</property>
+            <property name="label" translatable="yes">Save...</property>
+            <property name="underline">0</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="save_as" named="True">
+            <property name="command" type="command" cbtype="simple">on_save_as</property>
+            <property name="label" translatable="yes">Save as...</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Separator" id="separator4" />
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="quit" named="True">
+            <property name="accelerator">Ctrl-Q</property>
+            <property name="command" type="command" cbtype="simple">on_quit</property>
+            <property name="label" translatable="yes">Quit</property>
+            <property name="underline">0</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
